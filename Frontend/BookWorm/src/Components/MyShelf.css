@@ -1,0 +1,394 @@
+:root {
+    --primary: #bf6c45;
+    --bg-light: #f6f3ee;
+    --card-light: #fcfaf7;
+    --text-main: #161412;
+    --text-muted: #81716a;
+    --border: #e5e0dc;
+    --shadow: 0 18px 45px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    background: var(--bg-light);
+    color: var(--text-main);
+}
+
+/* ================= PAGE WRAPPER ================= */
+.shelf-page {
+    min-height: 100vh;
+    width: 100%;
+    background: var(--bg-light);
+}
+
+/* ================= TOP NAVBAR ================= */
+.shelf-navbar {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+}
+
+.shelf-navbar-inner {
+    width: min(1200px, 95vw);
+    margin: 0 auto;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.brand .logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: rgba(191, 108, 69, 0.15);
+    color: var(--primary);
+    font-weight: 900;
+}
+
+/* Nav links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 8px;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-main);
+    background: rgba(191, 108, 69, 0.08);
+}
+
+.nav-links a.active {
+    color: var(--primary);
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 2px;
+    height: 3px;
+    border-radius: 99px;
+    background: var(--primary);
+}
+
+/* Right icons */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: white;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.icon-btn:hover {
+    border-color: rgba(191, 108, 69, 0.45);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ================= MAIN CONTENT ================= */
+.shelf-container {
+    width: min(1200px, 95vw);
+    margin: 0 auto;
+    padding: 34px 0 60px;
+}
+
+/* Header section */
+.shelf-title {
+    font-size: 44px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.shelf-subtitle {
+    margin-top: 8px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ================= TABS ================= */
+.tabs-row {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+.tab-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 12px 2px;
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--text-muted);
+    position: relative;
+    transition: 0.2s ease;
+}
+
+.tab-btn:hover {
+    color: var(--text-main);
+}
+
+.tab-btn.active {
+    color: var(--primary);
+}
+
+.tab-btn.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -11px;
+    height: 3px;
+    border-radius: 99px;
+    background: var(--primary);
+}
+
+.tab-count {
+    margin-left: 8px;
+    background: rgba(191, 108, 69, 0.12);
+    color: var(--primary);
+    font-weight: 900;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 999px;
+}
+
+/* ================= GRID ================= */
+.books-grid {
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+/* ================= CARD ================= */
+.book-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+    transition: 0.2s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(191, 108, 69, 0.35);
+}
+
+/* top row */
+.book-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.book-cover {
+    width: 64px;
+    height: 82px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: #f2f2f2;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-title {
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 1.25;
+    color: var(--text-main);
+}
+
+.book-author {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* status badge */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 900;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(191, 108, 69, 0.12);
+    color: var(--primary);
+}
+
+/* progress section */
+.progress-wrap {
+    margin-top: 16px;
+}
+
+.progress-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    border-radius: 999px;
+    background: #eee;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 45%;
+    border-radius: 999px;
+    background: var(--primary);
+}
+
+/* buttons */
+.card-actions {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.btn-primary {
+    border: none;
+    border-radius: 14px;
+    padding: 12px 10px;
+    background: var(--primary);
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+    filter: brightness(0.95);
+}
+
+.btn-outline {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 12px 10px;
+    background: white;
+    color: var(--text-main);
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-outline:hover {
+    border-color: rgba(191, 108, 69, 0.35);
+    color: var(--primary);
+}
+
+/* Disabled */
+.btn-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ================= FOOTER ================= */
+.shelf-footer {
+    width: min(1200px, 95vw);
+    margin: 0 auto;
+    padding: 20px 0 30px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+    .books-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 820px) {
+    .shelf-title {
+        font-size: 36px;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-actions {
+        grid-template-columns: 1fr;
+    }
+}
