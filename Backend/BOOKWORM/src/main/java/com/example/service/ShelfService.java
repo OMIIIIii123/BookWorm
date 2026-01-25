@@ -68,7 +68,35 @@ public class ShelfService {
 		
 		shelfrepos.delete(items);
 		
-		
-		
 	}
+public MyShelf lendFromSubscription(int customerId, int productId) {
+
+	    // duplicate check for Library ('L')
+	    boolean alreadyExists =
+	            shelfrepos.existsByCustomerIdAndProductProductIdAndTranType(
+	                    customerId, productId, 'L'
+	            );
+
+	    if (alreadyExists) {
+	        throw new RuntimeException("Book already exists in My Library");
+	    }
+
+	    Product product = prorepo.findById(productId)
+	            .orElseThrow(() -> new RuntimeException("Product Not Found"));
+
+	    if (!product.isLibrary()) {
+	        throw new RuntimeException("Product not allowed in Library");
+	    }
+
+	    MyShelf shelf = new MyShelf();
+	    shelf.setCustomerId(customerId);
+	    shelf.setProduct(product);
+	    shelf.setTranType('L');
+
+	    // expire will be set later from subscription
+	    shelf.setProductExpiryDate(null);
+
+	    return shelfrepos.save(shelf);
+	}
+
 }
