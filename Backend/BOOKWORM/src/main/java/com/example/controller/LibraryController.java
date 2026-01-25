@@ -41,4 +41,16 @@ public class LibraryController {
 	            shelfserv.removeFromShelf(req.getCustomerId(), req.getProductId(), req.getTranType());
 	            return "Removed Successfully";
 	        }
+		    
+		    @PostMapping("/lend")
+		    public String lendFromLibrary(@RequestBody ShelfRequest req) {
+
+		        shelfserv.lendFromSubscription(
+		                req.getCustomerId(),
+		                req.getProductId()
+		        );
+
+		        return "Book added via library subscription";
+		    }
+
 }
