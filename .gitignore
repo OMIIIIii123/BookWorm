@@ -23,3 +23,38 @@ node_modules/
 
 # Build outputs
 *.log
+
+
+# Compiled Java files
+*.class
+
+# Maven build directory
+target/
+
+# Packaged files
+*.jar
+*.war
+*.ear
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node dependencies (if any)
+node_modules/
+
