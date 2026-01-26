@@ -23,8 +23,17 @@ public class BookSearchController {
 
     @GetMapping("/search")
     public List<BookSearchResultDto> search(@RequestParam("query") String query,
-                                           @RequestParam(value = "limit", defaultValue = "20") int limit) {
+            @RequestParam(value = "limit", defaultValue = "20") int limit) {
         return productSearchService.searchByTitle(query, limit)
+                .stream()
+                .map(BookSearchResultDto::fromProduct)
+                .toList();
+    }
+
+    @GetMapping("/search/author")
+    public List<BookSearchResultDto> searchByAuthor(@RequestParam("query") String query,
+            @RequestParam(value = "limit", defaultValue = "20") int limit) {
+        return productSearchService.searchByAuthor(query, limit)
                 .stream()
                 .map(BookSearchResultDto::fromProduct)
                 .toList();
@@ -37,8 +46,7 @@ public class BookSearchController {
             BigDecimal basePrice,
             BigDecimal offerPrice,
             boolean rentable,
-            boolean library
-    ) {
+            boolean library) {
         public static BookSearchResultDto fromProduct(Product p) {
             return new BookSearchResultDto(
                     p.getProductId(),
@@ -47,9 +55,7 @@ public class BookSearchController {
                     p.getBasePrice(),
                     p.getOfferPrice(),
                     p.isRentable(),
-                    p.isLibrary()
-            );
+                    p.isLibrary());
         }
     }
 }
-

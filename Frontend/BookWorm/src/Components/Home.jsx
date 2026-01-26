@@ -1,6 +1,7 @@
 import "./Home.css";
 import BookFilters from "./BookFilters";
 import SearchBar from "./SearchBar";
+import Package from "./Package";
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
           <span className="chip">#BestSellers</span>
         </div>
       </section>
+
+      {/* SUBSCRIPTION PACKAGE */}
+      <Package authorName="Martin" />
 
       {/* CONTENT */}
       <div className="home-content">

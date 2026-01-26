@@ -18,8 +18,9 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
     List<Product> findByProductNameContainingIgnoreCaseOrProductEnglishNameContainingIgnoreCase(
             String productName,
             String productEnglishName,
-            Pageable pageable
-    );
+            Pageable pageable);
+
+    List<Product> findByAuthorsAuthorNameContainingIgnoreCase(String authorName, Pageable pageable);
 
     // Default: All books
     @Query("SELECT p FROM Product p")
@@ -35,12 +36,11 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
     // Filter by Genre + Language
     @Query("""
-        SELECT p FROM Product p 
-        WHERE p.genre.genreId = :genreId 
-        AND p.language.languageId = :languageId
-    """)
+                SELECT p FROM Product p
+                WHERE p.genre.genreId = :genreId
+                AND p.language.languageId = :languageId
+            """)
     List<Product> findByGenreAndLanguage(
             @Param("genreId") Integer genreId,
-            @Param("languageId") Integer languageId
-    );
+            @Param("languageId") Integer languageId);
 }

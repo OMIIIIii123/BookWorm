@@ -25,8 +25,16 @@ public class ProductSearchService {
         int safeLimit = Math.min(Math.max(limit, 1), 50);
         return productRepository
                 .findByProductNameContainingIgnoreCaseOrProductEnglishNameContainingIgnoreCase(
-                        q, q, PageRequest.of(0, safeLimit)
-                );
+                        q, q, PageRequest.of(0, safeLimit));
+    }
+
+    public List<Product> searchByAuthor(String query, int limit) {
+        String q = query == null ? "" : query.trim();
+        if (q.isEmpty()) {
+            return List.of();
+        }
+
+        int safeLimit = Math.min(Math.max(limit, 1), 50);
+        return productRepository.findByAuthorsAuthorNameContainingIgnoreCase(q, PageRequest.of(0, safeLimit));
     }
 }
-

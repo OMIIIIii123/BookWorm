@@ -1,0 +1,159 @@
+.package-carousel-container {
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.package-header {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.package-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-main);
+    font-family: 'Manrope', sans-serif;
+    background: linear-gradient(90deg, #b66c45, #d98a69);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+    /* added spacing */
+}
+
+.package-subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.carousel-viewport {
+    display: flex;
+    justify-content: center;
+    /* Centers items */
+    flex-wrap: wrap;
+    /* Allows wrapping if many items, better for "grid" feel if centering is desired, or keep nowrap for carousel */
+    overflow-x: auto;
+    gap: 24px;
+    padding: 20px 5px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.carousel-viewport::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.package-card {
+    min-width: 220px;
+    max-width: 220px;
+    background: var(--card-light);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Soft premium shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+}
+
+.package-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    height: 200px;
+    /* Placeholder height */
+    background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+    position: relative;
+}
+
+/* Optional: if you have real images, use img tag, but for now gradient placeholder */
+.card-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 12px;
+}
+
+.card-content {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-author {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.card-price {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.card-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action {
+    flex: 1;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.btn-rent {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-rent:hover {
+    background: #a65d3b;
+}
+
+.btn-lend {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-lend:hover {
+    background: rgba(182, 108, 69, 0.05);
+}
+
+/* Dark mode specific adjustments */
+:root.dark .package-card {
+    background: #1e1e1e;
+    border-color: #333;
+}
