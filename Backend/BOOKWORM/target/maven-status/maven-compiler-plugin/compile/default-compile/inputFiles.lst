@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\madhu\Downloads\BookWorm_v2\BookWorm_v1-main\Backend\BOOKWORM\src\main\java\com\example\controller\RegistrationController.java
 C:\Users\madhu\Downloads\BookWorm_v2\BookWorm_v1-main\Backend\BOOKWORM\src\main\java\com\example\repository\GenreRepository.java
 C:\Users\madhu\Downloads\BookWorm_v2\BookWorm_v1-main\Backend\BOOKWORM\src\main\java\com\example\service\ICartService.java
@@ -75,3 +76,40 @@ C:\Users\madhu\Downloads\BookWorm_v2\BookWorm_v1-main\Backend\BOOKWORM\src\main\
 C:\Users\madhu\Downloads\BookWorm_v2\BookWorm_v1-main\Backend\BOOKWORM\src\main\java\com\example\repository\LibraryPackageProductRepository.java
 C:\Users\madhu\Downloads\BookWorm_v2\BookWorm_v1-main\Backend\BOOKWORM\src\main\java\com\example\controller\BookSearchController.java
 C:\Users\madhu\Downloads\BookWorm_v2\BookWorm_v1-main\Backend\BOOKWORM\src\main\java\com\example\model\ProductAttribute.java
+=======
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\config\SecurityConfig.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\controller\BookSearchController.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\controller\CategoryApiController.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\controller\LibraryController.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\controller\ProductController.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\controller\ShelfController.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\demo\BookwormApplication.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\Attribute.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\Author.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\AuthorProduct.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\AuthorProductId.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\Beneficiary.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\Cart.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\Customer.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\Genre.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\Invoice.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\InvoiceDetail.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\Language.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\MyShelf.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\Product.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\ProductAttribute.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\ProductBeneficiary.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\ProductType.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\Publisher.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\Royalty.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\model\ShelfRequest.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\repository\GenreRepository.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\repository\LanguageRepository.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\repository\ProductRepository.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\repository\ShelfRepository.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\service\CategoryService.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\service\ProductSearchService.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\service\ProductService.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\service\ProductServiceImpl.java
+D:\Games\BookWorm\Backend\BOOKWORM\src\main\java\com\example\service\ShelfService.java
+>>>>>>> b60cb46b8c4f6a6c2bc61055f58c8ff7c9a44843
