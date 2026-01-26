@@ -1,0 +1,66 @@
+.bw-footer {
+  background: var(--card-light);
+  padding: 60px 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 80px;
+  font-family: "Manrope", sans-serif;
+  color: var(--text-main);
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.04);
+}
+
+.bw-footer-col h4 {
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.bw-footer-col p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.bw-footer-col p:hover {
+  color: var(--text-main);
+}
+
+.bw-newsletter {
+  display: flex;
+  margin-top: 10px;
+}
+
+.bw-newsletter input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.bw-newsletter button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0 14px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .bw-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Dark mode variables */
+:root.dark {
+  --bg-light: #1a1a1a;
+  --card-light: #2a2a2a;
+  --text-main: #ffffff;
+  --text-muted: #cccccc;
+  --border: #444444;
+}

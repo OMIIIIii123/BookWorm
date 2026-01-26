@@ -1,0 +1,130 @@
+.profile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 75px;
+  right: 60px;
+  background: var(--card-light);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  width: 280px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.profile-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.profile-email {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.profile-menu {
+  padding: 8px 0;
+}
+
+.profile-item {
+  width: 100%;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text-main);
+  transition: background 0.2s ease;
+}
+
+.profile-item:hover {
+  background: var(--border);
+}
+
+.theme-toggle {
+  background: var(--border);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.logout-btn {
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+.logout-btn:hover {
+  background: rgba(231, 76, 60, 0.1);
+}
+
+.profile-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 8px 0;
+}
+
+/* Dark mode adjustments */
+:root.dark .profile-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+:root.dark .profile-dropdown {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .profile-dropdown {
+    right: 20px;
+    left: 20px;
+    width: auto;
+  }
+}

@@ -1,0 +1,151 @@
+.home-page {
+  background: var(--bg-light);
+  padding-bottom: 80px;
+  color: var(--text-main);
+  font-family: "Manrope", sans-serif;
+}
+
+/* HERO */
+.home-hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.home-hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.home-trending {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.chip {
+  background: var(--border);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* LAYOUT */
+.home-content {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* GRID */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.book-card {
+  background: var(--card-light);
+  border-radius: 22px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.book-img {
+  height: 180px;
+  background: var(--border);
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.book-card h4 {
+  margin-bottom: 4px;
+}
+
+.book-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.price-section {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.original-price {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  text-decoration-color: #e74c3c;
+  text-decoration-thickness: 2px;
+}
+
+.discounted-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.add-to-cart-btn {
+  flex: 1;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.buy-now-btn {
+  flex: 1;
+  background: var(--primary);
+  color: white;
+  border: 2px solid var(--primary);
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.buy-now-btn:hover {
+  background: #a65d3b;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .home-content {
+    grid-template-columns: 1fr;
+  }
+
+  .book-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Dark mode variables */
+:root.dark {
+  --bg-light: #1a1a1a;
+  --card-light: #2a2a2a;
+  --text-main: #ffffff;
+  --text-muted: #cccccc;
+  --border: #444444;
+}

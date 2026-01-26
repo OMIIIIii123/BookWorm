@@ -1,0 +1,188 @@
+:root {
+  --primary: #bf6c45;
+  --bg-light: #f6f3ee;
+  --card-light: #fcfaf7;
+  --text-main: #161412;
+  --text-muted: #81716a;
+}
+
+:root.dark {
+  --bg-light: #1a1a1a;
+  --card-light: #2a2a2a;
+  --text-main: #ffffff;
+  --text-muted: #cccccc;
+}
+
+/* PAGE */
+.cart-page {
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--bg-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-main);   /* CRITICAL FIX */
+}
+
+/* LAYOUT */
+.cart-container {
+  width: 1200px;
+  max-width: 95vw;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+/* LEFT CARD */
+.cart-left {
+  background: var(--card-light);
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  color: var(--text-main);
+}
+
+.cart-left h1 {
+  font-size: 32px;
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+.cart-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+/* CART ITEM */
+.cart-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-main);
+}
+
+.cart-item img {
+  width: 90px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info h3 {
+  margin-bottom: 4px;
+  color: var(--text-main);
+}
+
+.item-info p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* BADGES */
+.badge {
+  display: inline-block;
+  background: var(--border);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 6px;
+  color: var(--text-main);
+}
+
+/* ACTIONS */
+.item-actions {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.remove {
+  color: red;
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+.save {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+/* PRICE — THIS WAS INVISIBLE BEFORE */
+.item-price {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-main);
+}
+
+/* RIGHT CARD */
+.cart-right {
+  background: var(--card-light);
+  border-radius: 28px;
+  padding: 40px;
+  height: fit-content;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  color: var(--text-main);
+}
+
+.cart-right h2 {
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+
+/* SUMMARY */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.discount {
+  color: green;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 0;
+  color: var(--text-main);
+}
+
+/* BUTTON (same as Register) */
+.primary-btn {
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #a65d3b;
+}
+
+/* SECURE TEXT */
+.secure {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 14px;
+  color: var(--text-muted);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .cart-container {
+    grid-template-columns: 1fr;
+  }
+}
