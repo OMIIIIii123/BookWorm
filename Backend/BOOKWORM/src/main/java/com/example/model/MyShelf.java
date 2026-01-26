@@ -12,15 +12,16 @@ public class MyShelf {
     @Column(name = "shelf_id")
     private int shelfId;
 
-    @Column(name = "customer_id", nullable = false)
-    private int customerId;
+    // userId maps to customer_id column (because old DB column name is customer_id)
+    @Column(name = "user_id", nullable = false)
+    private int userId;
 
     @ManyToOne
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
 
     @Column(name = "tran_type", length = 1, nullable = false)
-    private char tranType;   // e.g. B = Buy, R = Rent
+    private char tranType; // e.g. 'P' = purchase, 'R' = rent, 'L' = library
 
     @Column(name = "expiry_date")
     private LocalDate productExpiryDate;
@@ -35,12 +36,12 @@ public class MyShelf {
         this.shelfId = shelfId;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public Product getProduct() {
