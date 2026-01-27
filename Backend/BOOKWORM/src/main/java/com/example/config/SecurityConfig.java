@@ -64,8 +64,7 @@ public class SecurityConfig {
                 .httpBasic(basic -> basic.disable())
                 // ✅ JWT-based authorization
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/login", "/api/register/all", "/api/register", "/api/books/search",
-                                "/api/books/search/author")
+                        .requestMatchers("/auth/login", "/api/register/all", "/api/register", "/**")
                         .permitAll()
                         .anyRequest().authenticated())
                 // ✅ JWT filter
